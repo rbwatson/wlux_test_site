@@ -1,13 +1,15 @@
 // avoid conflicting with jquery on the study site
 $wlux = jQuery.noConflict();
+//$loggerURL = "/data_reporting/logger.php";
+$loggerURL = "http://staff.washington.edu/rbwatson/logger.php";
 
 $wlux(document).ready(function() {
     var logTransition = function(from, to) {
-        $wlux.post("/data_reporting/logger.php", {"type" : "transition", "from" : from, "to" : to});
+        $wlux.post($loggerURL, {"type" : "transition", "from" : from, "to" : to});
     };
 
     // log the page open event immediately
-    $wlux.post("/data_reporting/logger.php", {"type" : "open", "location" : window.location.href});
+    $wlux.post($loggerURL, {"type" : "open", "location" : window.location.href});
 
     /* Log transitions
        Note: this only handles page transitions when clicking achor tags.
