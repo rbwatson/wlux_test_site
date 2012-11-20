@@ -12,10 +12,12 @@ $data_arr = array();
 
 if ($type == "open") {
     $data_arr = array("OPEN",
+                      "\tSESSION:\t" . $_POST["session_id"],
                       "\tLOCATION:\t" . $_POST["location"],
                       "\tTIME:\t" . date('m/d/Y h:i:s a', time()));
 } else if ($type == "transition") {
     $data_arr = array("TRANSITION",
+                      "\tSESSION:\t" . $_POST["session_id"],
                       "\tFROM:\t" . $_POST["from"],
                       "\tTO:\t\t" . $_POST["to"],
                       "\tTIME:\t" . date('m/d/Y h:i:s a', time()));
