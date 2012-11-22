@@ -1,25 +1,18 @@
-wlux_test_site
-==============
-
+##wlux_test_site
 These files represent the files you would find on a website that was being studied by WebLabUX. The files in this Repo run on http://students.washington.edu/rbwatson/ .
 
+##Test site files
+* spades.html
+* hearts.html
+* default.css - default style used by both test pages
+* test styles in the `css` directory
 
-The files on the server are currently:
+##Development
+For testing purposes, you need to clone both wlux_test_site and
+wlux_test_server into directories called `site` and `server`, respectively,
+in order for everything to work properly.
 
-pingtest.php:
-A page that runs on the study site and communicates with the WebLabUX test server when  it is being studied. This page just tests the use of a jsonp file. Open http://students.washington.edu/rbwatson/pingtest.php to see this test.
- 
-phpinfo.php:
-Displays the current php configuration of the server.
+Then, start up your webserver and navigate to `localhost/server/start.php` to
+begin a study. Study results will be located at `localhost/server/log.txt`.
 
-Test site files
-===============
-
-hearts.css
-
-spades.css
-
-spades.html
-
-weblabOptions.js
 
