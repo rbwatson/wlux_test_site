@@ -1,3 +1,6 @@
+##Server status
+The http://students.washington.edu/rbwatson/ server has been updated to this repo as  of 11/22/2012 @ 10:00.
+
 ##wlux_test_site
 These files represent the files you would find on a website that was being studied by WebLabUX. The files in this Repo run on http://students.washington.edu/rbwatson/ .
 
