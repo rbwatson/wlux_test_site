@@ -1,12 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title> Learn Hearts! </title>
         <link rel="stylesheet" type="text/css" href="default.css" />
         
-        <script src="http://staff.washington.edu/rbwatson/jquery.js"></script>
-        <script src="http://staff.washington.edu/rbwatson/wlux_instrumentation.js"></script>
+        <script>
+        // this is here to aid debugging only, so we don't have to manually change these
+        // each time we update from the upstream github repo
+        var host = window.location.host;
+        var LOCAL = (host.indexOf("localhost") != -1) ||
+                    (host.indexOf("127.0.0.1") != -1);
+        if (LOCAL) {
+            document.write('<script src="/server/jquery.js"><\/script>\n');
+            document.write('<script src="/server/wlux_instrumentation.js"><\/script>');
+        } else {
+            document.write('<script src="http://staff.washington.edu/rbwatson/jquery.js"><\/script>\n');
+            document.write('<script src="http://staff.washington.edu/rbwatson/wlux_instrumentation.js"><\/script>');
+        }
+        </script>
+
+        <!-- for an actual site under study, you only need to include the following line
+        <script src="http://staff.washington.edu/rbwatson/wlux_instrumentation.min.js"></script>
+         -->
     </head>
     <body>
         <div id="linksbar">
